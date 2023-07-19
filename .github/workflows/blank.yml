@@ -63,20 +63,5 @@ jobs:
 
         run: |
          python send.py
-
-      - name: upload
-        run: |
-          month=$(date +'%Y/%m')
-          day=$(date +'%Y/%m/%d')
-          mkdir -p "$month"
-          mv output.log "$day.log"
-          # Configure git
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-
-          # Commit and push the log file
-          git add "$day.log"
-          git commit -m "$day.log"
-          git push
      
           
