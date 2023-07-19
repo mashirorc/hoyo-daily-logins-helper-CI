@@ -56,13 +56,7 @@ jobs:
         run: hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail   &> output.log
       - name: send
         env:
-          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}        
-          AGENTID: ${{ secrets.AGENTID }}
-          CORPID: ${{ secrets.CORPID }}
-          CORPSECRET: ${{ secrets.CORPSECRET }}
-          PROVIDER: ${{ secrets.PROVIDER }}
           WEBHOOK: ${{ secrets.WEBHOOK }}
-          CHANNEL: ${{ secrets.CHANNEL }}
 
         run: |
          python send.py
