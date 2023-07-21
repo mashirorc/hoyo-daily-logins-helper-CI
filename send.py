@@ -3,7 +3,6 @@ import os
 from onepush import get_notifier
 
 WEBHOOK = os.environ['WEBHOOK']
-log_content = f.read()
 
 
 #if "Message: OK" not in log_content:
