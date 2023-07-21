@@ -12,4 +12,4 @@ with open('output.log', 'r', encoding='utf-8') as f:
     print(n.params)  
 
     response = n.notify(webhook=WEBHOOK,content=log_content)
-    print(response.text
+    print(response.text)
