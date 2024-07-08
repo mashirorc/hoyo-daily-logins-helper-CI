@@ -58,7 +58,6 @@ jobs:
       - name: daily
         run: |
           HOYO_LANGUAGE=zh-cn hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail &> output.log
-          HOYO_LANGUAGE=zh-cn hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --zzz &> output.log
       - name: send
         env:
           WEBHOOK: ${{ secrets.WEBHOOK }}
