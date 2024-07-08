@@ -57,7 +57,7 @@ jobs:
          pip install hoyo-daily-logins-helper
       - name: daily
         run: |
-          HOYO_LANGUAGE=zh-cn hoyo-daily-logins-helper --game starrail --cookie "${{ secrets.HOYO_COOKIE }}" &> output.log
+          HOYO_LANGUAGE=zh-cn hoyo-daily-logins-helper --game starrail --cookie "${{ secrets.HOYO_COOKIE }}" --game zzz --cookie "${{ secrets.HOYO_COOKIE_ZZZ }}" &> output.log
       - name: send
         env:
           WEBHOOK: ${{ secrets.WEBHOOK }}
